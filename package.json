@@ -1,0 +1,36 @@
+{
+  "name": "ai-pr-checklist-bot",
+  "version": "0.1.0",
+  "description": "Generate repository-aware PR review checklists from local rules and changed files.",
+  "type": "module",
+  "bin": {
+    "ai-pr-checklist": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "action.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "start": "node dist/cli.js"
+  },
+  "keywords": [
+    "pull-request",
+    "checklist",
+    "github-action",
+    "code-review",
+    "ai-coding"
+  ],
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^20.19.41",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  }
+}

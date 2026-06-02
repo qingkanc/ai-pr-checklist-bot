@@ -1,0 +1,22 @@
+name: AI PR Checklist Bot
+description: Generate repository-aware PR review checklists from rule files and changed files.
+inputs:
+  root:
+    description: Repository root to scan.
+    required: false
+    default: .
+  base:
+    description: Git base ref used when files are not provided.
+    required: false
+    default: origin/main
+  files:
+    description: Comma-separated changed file paths. If omitted, git diff is used.
+    required: false
+    default: ''
+  output:
+    description: Output Markdown file.
+    required: false
+    default: PR_CHECKLIST.md
+runs:
+  using: node20
+  main: dist/cli.js
